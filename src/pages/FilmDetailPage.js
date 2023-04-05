@@ -7,6 +7,7 @@ import { Loading } from "../components/Loading";
 import { FilmDetailSummary } from "../modules/films/FilmDetailSummary";
 import { GET_FILM_DETAIL } from "../modules/films/queries";
 import { PlanetList } from "../modules/planets/PlanetList";
+import { CharacterList } from "../modules/Characters/CharacterList";
 
 export const FilmDetailPage = () => {
   const { id } = useParams();
@@ -33,6 +34,10 @@ export const FilmDetailPage = () => {
       <Grid item xs={12}>
         <Typography variant="h4">Planets</Typography>
         <PlanetList planets={film.planetConnection.planets} />
+      </Grid>
+      <Grid item xs={12}>
+      <Typography variant="h4">Characters</Typography>
+        <CharacterList characters={film.characterConnection.characters} />
       </Grid>
     </Grid>
   );
