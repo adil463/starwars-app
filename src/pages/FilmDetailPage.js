@@ -37,7 +37,16 @@ export const FilmDetailPage = () => {
       </Grid>
       <Grid item xs={12}>
       <Typography variant="h4">Characters</Typography>
-        <CharacterList characters={film.characterConnection.characters} />
+      {/* <CharacterList characters={film.characterConnection.characters} /> */}
+      <ul>
+        {film.characterConnection.characters.map((character) => (
+          <li key={character.id}>
+            <h2>{character.name}</h2>
+            <p>{character.gender}</p>
+            <p>{character.birthYear}</p>
+          </li>
+        ))}
+      </ul>
       </Grid>
     </Grid>
   );

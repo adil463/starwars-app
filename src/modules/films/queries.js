@@ -26,12 +26,27 @@ export const GET_FILM_DETAIL = gql`
           diameter
         }
       }
+      characterConnection {
+        characters {
+          id
+          name
+          height
+        }
+      }
+      """ 
+      starConnection {
+        starships{
+          name
+          model
+          passengers
+        }
+      }
+       """
     }
   }
 `;
-/*
 export const GET_CHARACTER_DETAILS= gql`
-  allFilms {
+  query allFilms {
     films {
       characterConnection {
         characters {
@@ -46,13 +61,11 @@ export const GET_CHARACTER_DETAILS= gql`
         }
       }
     }
-  }
-  }
 `;
 
 export const GET_STARSHIP_DETAILS = gql`
 query Starships{
-  allFilms {
+  query allFilms {
     films {
       starshipConnection {
         starships {
@@ -68,4 +81,3 @@ query Starships{
   }
 }
 `;
-*/

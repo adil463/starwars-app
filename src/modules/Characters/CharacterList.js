@@ -1,18 +1,18 @@
 import { List, ListItem, ListItemText } from "@mui/material";
-import React from "react";
 
 export const CharacterList = (props) => {
-  const { Characters } = props;
-  return (
-    <List>
-      {Characters.map((planet, i) => (
-        <ListItem key={i}>
-          <ListItemText
-            primary={`Name: ${planet.name}`}
-            secondary={`Diameter: ${planet.diameter} miles`}
-          />
-        </ListItem>
-      ))}
-    </List>
-  );
-};
+    const { characters } = props;
+    return (
+      <List>
+        {characters.map((character, i) => (
+          <ListItem key={i}>
+            <ListItemText
+              primary={`Name: ${character.name}`}
+              secondary={`Height: ${character.height} Inches`}
+            />
+          </ListItem>
+        ))}
+      </List>
+    );
+  };
+  
