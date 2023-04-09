@@ -45,7 +45,7 @@ export const GET_FILM_DETAIL = gql`
     }
   }
 `;
-export const GET_CHARACTER_DETAILS= gql`
+/* export const GET_CHARACTER_DETAILS= gql`
   query allFilms {
     films {
       characterConnection {
@@ -81,9 +81,9 @@ export const GET_CHARACTER_DETAILS= gql`
     }
   }
   }
-`;
+`; */
 
-export const GET_STARSHIP_DETAILS = gql`
+/* export const GET_STARSHIP_DETAILS = gql`
 query Starships{
   allFilms {
     films {
@@ -120,4 +120,4 @@ query Starships{
     }
   }
 }
-`;
+`; */
