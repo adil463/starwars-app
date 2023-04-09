@@ -8,7 +8,7 @@ import { FilmDetailSummary } from "../modules/films/FilmDetailSummary";
 import { GET_FILM_DETAIL } from "../modules/films/queries";
 import { PlanetList } from "../modules/planets/PlanetList";
 import { CharacterList } from "../modules/Characters/CharacterList";
-
+import { StarshipList } from "../modules/Starships/StarshipList";
 export const FilmDetailPage = () => {
   const { id } = useParams();
 
@@ -37,16 +37,11 @@ export const FilmDetailPage = () => {
       </Grid>
       <Grid item xs={12}>
       <Typography variant="h4">Characters</Typography>
-      {/* <CharacterList characters={film.characterConnection.characters} /> */}
-      <ul>
-        {film.characterConnection.characters.map((character) => (
-          <li key={character.id}>
-            <h2>{character.name}</h2>
-            <p>{character.gender}</p>
-            <p>{character.birthYear}</p>
-          </li>
-        ))}
-      </ul>
+      <CharacterList characters={film.characterConnection.characters} /> 
+      </Grid>
+      <Grid item xs={12}>
+      <Typography variant="h4">Starships</Typography>
+      <StarshipList starships={film.starshipConnection.starships} /> 
       </Grid>
     </Grid>
   );

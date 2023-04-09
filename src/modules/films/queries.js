@@ -31,75 +31,37 @@ export const GET_FILM_DETAIL = gql`
           id
           name
           height
+          hairColor
         }
       }
-      """ 
-      starConnection {
+
+      starshipConnection {
         starships{
           name
-          model
-          passengers
-        }
-      }
-       """
-    }
-  }
-`;
-/* export const GET_CHARACTER_DETAILS= gql`
-  query allFilms {
-    films {
-      characterConnection {
-        characters {
-          name
-          height
-          hairColor
-          birthYear
-          homeworld {
-          name  
-          }
-        }
-        }
-      }
-    }
-`;
-
-export const GET_CHARACTER_DETAILS= gql`
-  allFilms {
-    films {
-      characterConnection {
-        characters {
-          name
-          height
-          hairColor
-          birthYear
-          homeworld {
-          name  
-          }
-        }
-        }
-      }
-    }
-  }
-  }
-`; */
-
-/* export const GET_STARSHIP_DETAILS = gql`
-query Starships{
-  allFilms {
-    films {
-      starshipConnection {
-        starships {
-          name
-          model
-          passengers
-          starshipClass
           id
-          cargoCapacity
+          model
+          starshipClass
+        }
+      }
+
+    }
+  }
+`;
+
+/* export const GET_CHARACTER_DETAILS = gql`
+  query GET_CHARACTER_DETAILS {
+    allfilms {
+      films {
+        name
+        height
+        hairColor
+        birthYear
+        homeworld {
+          name
         }
       }
     }
   }
-}
 `;
 
 
