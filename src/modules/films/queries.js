@@ -63,6 +63,46 @@ export const GET_CHARACTER_DETAILS= gql`
     }
 `;
 
+export const GET_CHARACTER_DETAILS= gql`
+  allFilms {
+    films {
+      characterConnection {
+        characters {
+          name
+          height
+          hairColor
+          birthYear
+          homeworld {
+          name  
+          }
+        }
+        }
+      }
+    }
+  }
+  }
+`;
+
+export const GET_STARSHIP_DETAILS = gql`
+query Starships{
+  allFilms {
+    films {
+      starshipConnection {
+        starships {
+          name
+          model
+          passengers
+          starshipClass
+          id
+          cargoCapacity
+        }
+      }
+    }
+  }
+}
+`;
+
+
 export const GET_STARSHIP_DETAILS = gql`
 query Starships{
   query allFilms {
